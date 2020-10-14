@@ -11,6 +11,6 @@ spec:
     app: mosquitto
   ports:
     - protocol: TCP
-      port: 81883
+      port: 61883
       targetPort: 1883    # port exposed by Pod
       nodePort: 31883
