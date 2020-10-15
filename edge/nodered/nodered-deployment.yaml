@@ -33,6 +33,6 @@ spec:
         - name: TZ
           value: America/Los_Angeles
       volumes:
-        - name: mqtt-data
+        - name: node-red-data
           persistentVolumeClaim:
             claimName: local-path-pvc
