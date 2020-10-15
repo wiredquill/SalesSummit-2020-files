@@ -1,7 +1,8 @@
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: node-red
+  namespace: node-red
   labels:
     app: node-red
 spec:
@@ -23,7 +24,6 @@ spec:
           privileged: true
         volumeMounts:
         - name: node-red-data
-          subPathExpr: $(NODE_NAME)
           mountPath: /data
         env:
         - name: NODE_NAME
@@ -33,17 +33,6 @@ spec:
         - name: TZ
           value: America/Los_Angeles
       volumes:
-      - name: node-red-data
-        persistentVolumeClaim:
-          claimName: node-red-claim
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: node-red-claim
-spec:
-  accessModes:
-  - ReadWriteOnce
-  resources:
-    requests:
-      storage: 1Gi
+        - name: mqtt-data
+          persistentVolumeClaim:
+            claimName: local-path-pvc
