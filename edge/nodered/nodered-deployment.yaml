@@ -25,27 +25,6 @@ spec:
         volumeMounts:
         - name: node-red-data
           mountPath: /data
-       livenessProbe:
-          httpGet:
-          path: /
-          port: 1880
-          failureThreshold: 3
-          successThreshold: 1
-          initialDelaySeconds: 0
-          timeoutSeconds: 1
-          periodSeconds: 10
-          tcpSocket: {}
-        startupProbe:
-          httpGet:
-          path: /
-          port: 1880
-          failureThreshold: 3
-          successThreshold: 1
-          initialDelaySeconds: 0
-          timeoutSeconds: 1
-          periodSeconds: 10
-          tcpSocket: {}
-          resources: {}
         env:
         - name: NODE_NAME
           valueFrom:
