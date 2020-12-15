@@ -2,6 +2,8 @@
 
 In this lab we are going to install and configure an MQTT Workload (Mosquitto) to run on k3s cluster
 
+When the Deployment is complete you will have an MQTT service running on port 61883  
+
 
 ## Create a hostPath backed persistent volume claim and a pod to utilize it
 
@@ -13,6 +15,6 @@ In this lab we are going to install and configure an MQTT Workload (Mosquitto) t
 
 ## Test MQTT
 
-MQTT is exposed on port 61883
+MQTT is now exposed on port 61883
 
-Install the Node Red so you can see MQTT traffic 
+Install the Node Red so you can see MQTT traffic
