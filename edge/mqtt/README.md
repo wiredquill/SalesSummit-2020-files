@@ -12,3 +12,7 @@ In this lab we are going to install and configure an MQTT Workload (Mosquitto) t
 
 
 ## Test MQTT
+
+MQTT is exposed on port 61883
+
+Install the Node Red so you can see MQTT traffic 
