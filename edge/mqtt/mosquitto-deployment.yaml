@@ -24,18 +24,8 @@ spec:
             - containerPort: 1883   # which port of the container is exposed to the Pod
           volumeMounts:
             - name: mqtt-data
-              mountPath: /mqtt/data
-            - name: mqtt-log
-              mountPath: /mqtt/log
-            - name: mqtt-config
-              mountPath: /mqtt/config
+              mountPath: /mqtt
       volumes:
         - name: mqtt-data
           persistentVolumeClaim:
             claimName: local-path-pvc
-        - name: mqtt-log
-          persistentVolumeClaim:
-            claimName: local-path-pvc
-        - name: mqtt-config
-          persistentVolumeClaim:
-             claimName: local-path-pvc
