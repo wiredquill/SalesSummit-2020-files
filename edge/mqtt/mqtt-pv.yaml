@@ -61,7 +61,7 @@ spec:
         image: rancher/local-path-provisioner:v0.0.17
         imagePullPolicy: IfNotPresent
         command:
-        - local-path-provisioner
+        - local-path-provisioner\
         - --debug
         - start
         - --config
