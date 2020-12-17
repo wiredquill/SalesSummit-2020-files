@@ -19,7 +19,7 @@ spec:
         image: nodered/node-red:latest
         ports:
         - containerPort: 1880
-          name: node-red-ui
+          name: node-red
         securityContext:
           privileged: true
         volumeMounts:
