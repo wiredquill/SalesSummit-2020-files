@@ -110,3 +110,16 @@ data:
         #!/bin/sh
         path=$1
         rm -rf ${path}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: local-path-pvc
+  namespace: node-red
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 2Gi
