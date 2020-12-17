@@ -49,6 +49,10 @@ Example:
 NAME        STATUS   ROLES    AGE   VERSION
 pi-erin-1   Ready    master   55s   v1.18.9+k3s1
 ```
+### Install bash autocomplete for kubectl
+
+    kubectl completion bash >/etc/bash_completion.d/kubectl
+    source ~/.bashrc
 
 ### Install Helm3
 
@@ -62,7 +66,7 @@ sudo mv linux-arm64/helm /usr/local/bin
 #### Add Standard Charts
 ```
 helm repo add stable https://charts.helm.sh/stable
-helm repo Update
+helm repo update
 ```
 
 
