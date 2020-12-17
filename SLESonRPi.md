@@ -128,7 +128,7 @@ Successfully registered system
 
 *Note 'which' is needed for the k3s install and 'sudo' is not installed by default
 
-    zypper in -y sudo which curl nmap git-core
+    zypper in -y sudo which curl nmap git-core bash-completion
 
 
 ### Change the Hostname - Please use your name as part of the hostname
