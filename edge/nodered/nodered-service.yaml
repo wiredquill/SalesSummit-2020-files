@@ -2,12 +2,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: rode-red
-  namespace: node-red
+  name: rodered
+  namespace: nodered
 spec:
   type: NodePort
   selector:             # indicates into which pods ClusterIP provides access
-    app: node-red
+    app: nodered
   ports:
     - protocol: TCP
       port: 61883

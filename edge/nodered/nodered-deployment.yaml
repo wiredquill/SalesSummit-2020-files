@@ -1,29 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-red
-  namespace: node-red
+  name: nodered
+  namespace: nodered
   labels:
-    app: node-red
+    app: node-ed
 spec:
   selector:
     matchLabels:
-      app: node-red
+      app: nodered
   template:
     metadata:
       labels:
-        app: node-red
+        app: nodered
     spec:
       containers:
-      - name: node-red
+      - name: nodered
         image: nodered/node-red:latest
         ports:
         - containerPort: 1880
-          name: node-red
+          name: nodered
         securityContext:
           privileged: true
         volumeMounts:
-        - name: node-red-data
+        - name: nodered-data
           mountPath: /data
         env:
         - name: NODE_NAME
@@ -33,6 +33,6 @@ spec:
         - name: TZ
           value: America/Los_Angeles
       volumes:
-        - name: node-red-data
+        - name: nodered-data
           persistentVolumeClaim:
             claimName: local-path-pvc

@@ -123,3 +123,42 @@ spec:
   resources:
     requests:
       storage: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodered
+  namespace: nodered
+  labels:
+    app: node-ed
+spec:
+  selector:
+    matchLabels:
+      app: nodered
+  template:
+    metadata:
+      labels:
+        app: nodered
+    spec:
+      containers:
+      - name: nodered
+        image: nodered/node-red:latest
+        ports:
+        - containerPort: 1880
+          name: nodered
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: nodered-data
+          mountPath: /data
+        env:
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        - name: TZ
+          value: America/Los_Angeles
+      volumes:
+        - name: nodered-data
+          persistentVolumeClaim:
+            claimName: local-path-pvc

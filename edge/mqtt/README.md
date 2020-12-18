@@ -14,8 +14,6 @@ Prerequisites:
     kubectl create -f mosquitto-deployment.yaml
 
 
-## Test MQTT
+## Locate IP address of MQTT
 
-MQTT is now exposed on port 61883
-
-Install the Node Red so you can see MQTT traffic
+    kubectl get svc -n mqtt
