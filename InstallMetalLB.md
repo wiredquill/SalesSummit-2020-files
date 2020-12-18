@@ -28,7 +28,7 @@ configInline:
   - name: default
     protocol: layer2
     addresses:
-    - 10.0.0.100-10.0.0.109   #This should be a range on 10 IP addresses available on your local Network
+    - 10.0.0.100-10.0.0.109   # This should be a range on 10 IP addresses available on your local Network
 ```
 
 #### Install MetalLB with Helm

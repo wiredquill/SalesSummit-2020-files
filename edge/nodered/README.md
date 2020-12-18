@@ -9,14 +9,14 @@ Prerequisites:
 
 ## Create a hostPath backed persistent volume claim and a pod to utilize it
 
-    kubectl create -f nodered-storage.yaml
-    kubectl create -f nodered-service-lb.yaml
     kubectl create -f nodered-deployment.yaml
+    kubectl create -f nodered-service-lb.yaml
+
 
 ## Locate IP address of Node-Red
 
     kubectl get svc -n nodered
-    
+
 Example:
 
 ```

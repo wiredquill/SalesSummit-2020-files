@@ -11,14 +11,14 @@ Prerequisites:
 ## Create a hostPath backed persistent volume claim and a pod to utilize it
 
     kubectl create -f mosquitto-deployment.yaml
-    kubectl create -f mosquitto-service.yaml
-    
+    kubectl create -f mosquitto-service-lb.yaml
+
 
 
 ## Locate IP address of MQTT
 
     kubectl get svc -n mqtt
-    
+
 Example:
 
 ```
