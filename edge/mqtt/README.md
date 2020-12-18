@@ -10,8 +10,9 @@ Prerequisites:
 
 ## Create a hostPath backed persistent volume claim and a pod to utilize it
 
-    kubectl create -f mosquitto-service.yaml
     kubectl create -f mosquitto-deployment.yaml
+    kubectl create -f mosquitto-service.yaml
+    
 
 
 ## Locate IP address of MQTT
@@ -24,3 +25,5 @@ Example:
 NAME        TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
 mosquitto   LoadBalancer   10.43.168.45   10.0.11.101   1883:30155/TCP   19s
 ```
+
+This tells us that MQTT is now available on 10.0.11.101 on port 1883
