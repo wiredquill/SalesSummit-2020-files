@@ -17,3 +17,10 @@ Prerequisites:
 ## Locate IP address of MQTT
 
     kubectl get svc -n mqtt
+    
+Example:
+
+```
+NAME        TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+mosquitto   LoadBalancer   10.43.168.45   10.0.11.101   1883:30155/TCP   19s
+```
