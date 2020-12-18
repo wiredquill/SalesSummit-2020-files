@@ -4,10 +4,10 @@ metadata:
   name: node-red
   namespace: node-red
 spec:
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 1880
   selector:
     app: node-red
   type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80    #Move Node-Red to port 80
+    targetPort: 1880

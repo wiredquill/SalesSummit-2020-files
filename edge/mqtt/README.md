@@ -2,13 +2,14 @@
 
 In this lab we are going to install and configure an MQTT Workload (Mosquitto) to run on k3s cluster
 
-When the Deployment is complete you will have an MQTT service running on port 61883  
+Prerequisites:
+     Raspberry Pi running SLES 15 SP2
+     K3s installed
+     MetalLB installed and configured
 
 
 ## Create a hostPath backed persistent volume claim and a pod to utilize it
 
-    kubectl create -f mosquitto-pv.yaml
-    kubectl create -f mosquitto-pvc.yaml
     kubectl create -f mosquitto-service.yaml
     kubectl create -f mosquitto-deployment.yaml
 

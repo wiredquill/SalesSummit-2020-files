@@ -4,6 +4,8 @@ In this lab, we are going to install and configure k3s on a Raspaberry Pi
 
 ### Before we start the lab you need to have <a href="SLESonRPi.md">SLES 15 SP2 installed</a> on your Raspberry Pi.
 
+
+
 We will begin this lab as the tux user on your Raspberry Pi
 
     ssh tux@x.x.x.x
