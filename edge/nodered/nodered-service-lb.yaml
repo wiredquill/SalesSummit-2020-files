@@ -9,5 +9,5 @@ spec:
   type: LoadBalancer
   ports:
   - protocol: TCP
-    port: 80    #Move Node-Red to port 80
+    port: 1880    #Move Node-Red to port 80
     targetPort: 1880
