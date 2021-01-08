@@ -9,4 +9,4 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 10.0.11.100-10.0.11.109    # This should be 10 open addresses on your local Network
+      - 10.0.8.10-10.0.8.30    # This should be 10 open addresses on your local Network
